@@ -35,11 +35,11 @@
 /* Begin PBXFileReference section */
 		0351E4EC1DFEDAB700A5FD76 /* DAOPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOPersistent.swift; sourceTree = "<group>"; };
 		0351E4F01DFEDB8B00A5FD76 /* DAOTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOTranslator.swift; sourceTree = "<group>"; };
-		0351E4F41DFF03BC00A5FD76 /* MockRealmTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRealmTranslator.swift; path = MockRealmTranslator.swift; sourceTree = "<group>"; };
-		0351E4F61DFF044200A5FD76 /* MockRealmEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRealmEntity.swift; path = MockRealmEntity.swift; sourceTree = "<group>"; };
-		0351E4F81DFF048200A5FD76 /* MockRealmEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRealmEntry.swift; path = MockRealmEntry.swift; sourceTree = "<group>"; };
-		0351E4FA1DFF07CC00A5FD76 /* MockRealmFabric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRealmFabric.swift; path = MockRealmFabric.swift; sourceTree = "<group>"; };
-		0377D59F1DFF46A7002B3DA5 /* MockRealmStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockRealmStack.swift; path = MockRealmStack.swift; sourceTree = "<group>"; };
+		0351E4F41DFF03BC00A5FD76 /* MockRealmTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRealmTranslator.swift; sourceTree = "<group>"; };
+		0351E4F61DFF044200A5FD76 /* MockRealmEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRealmEntity.swift; sourceTree = "<group>"; };
+		0351E4F81DFF048200A5FD76 /* MockRealmEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRealmEntry.swift; sourceTree = "<group>"; };
+		0351E4FA1DFF07CC00A5FD76 /* MockRealmFabric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRealmFabric.swift; sourceTree = "<group>"; };
+		0377D59F1DFF46A7002B3DA5 /* MockRealmStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRealmStack.swift; sourceTree = "<group>"; };
 		03A735351DFAFE4800BF5C99 /* DAO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DAO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A735391DFAFE4800BF5C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03A7353E1DFAFE4800BF5C99 /* DAOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DAOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,7 +83,6 @@
 				0351E4EC1DFEDAB700A5FD76 /* DAOPersistent.swift */,
 				0351E4F01DFEDB8B00A5FD76 /* DAOTranslator.swift */,
 			);
-			name = DAOProtocol;
 			path = DAOProtocol;
 			sourceTree = "<group>";
 		};
@@ -92,7 +91,6 @@
 			children = (
 				03A7355D1DFB045200BF5C99 /* DAORealm.swift */,
 			);
-			name = Realm;
 			path = Realm;
 			sourceTree = "<group>";
 		};
