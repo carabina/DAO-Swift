@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DAO-Swift_Example' do
+  pod 'DAO-Swift', :path => '../'
+
+  target 'DAO-Swift_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
