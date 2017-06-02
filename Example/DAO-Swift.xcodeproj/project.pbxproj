@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0317F5681EE1C1AD00870A9C /* DAO-SwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317F5671EE1C1AD00870A9C /* DAO-SwiftTest.swift */; };
+		0317F5701EE1C20F00870A9C /* MockRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317F56B1EE1C20F00870A9C /* MockRealmEntity.swift */; };
+		0317F5711EE1C20F00870A9C /* MockRealmEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317F56C1EE1C20F00870A9C /* MockRealmEntry.swift */; };
+		0317F5721EE1C20F00870A9C /* MockRealmFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317F56D1EE1C20F00870A9C /* MockRealmFabric.swift */; };
+		0317F5731EE1C20F00870A9C /* MockRealmStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317F56E1EE1C20F00870A9C /* MockRealmStack.swift */; };
+		0317F5741EE1C20F00870A9C /* MockRealmTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317F56F1EE1C20F00870A9C /* MockRealmTranslator.swift */; };
 		4721BF481F94CEE95AB7A50B /* Pods_DAO_Swift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D698E28CF6959682D07EA /* Pods_DAO_Swift_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		607FACD81AFB9204008FA782 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* TestViewController.swift */; };
+		607FACDB1AFB9204008FA782 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Test.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9C0531035E01EB4541E24A01 /* Pods_DAO_Swift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D8E5D4FF6CC6432D51DCBC /* Pods_DAO_Swift_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,23 +33,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0317F5671EE1C1AD00870A9C /* DAO-SwiftTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DAO-SwiftTest.swift"; sourceTree = "<group>"; };
+		0317F56B1EE1C20F00870A9C /* MockRealmEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRealmEntity.swift; sourceTree = "<group>"; };
+		0317F56C1EE1C20F00870A9C /* MockRealmEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRealmEntry.swift; sourceTree = "<group>"; };
+		0317F56D1EE1C20F00870A9C /* MockRealmFabric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRealmFabric.swift; sourceTree = "<group>"; };
+		0317F56E1EE1C20F00870A9C /* MockRealmStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRealmStack.swift; sourceTree = "<group>"; };
+		0317F56F1EE1C20F00870A9C /* MockRealmTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRealmTranslator.swift; sourceTree = "<group>"; };
 		50E2C885842855412B1094BC /* Pods-DAO-Swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAO-Swift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DAO-Swift_Tests/Pods-DAO-Swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* DAO-Swift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DAO-Swift_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Test.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* DAO-Swift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DAO-Swift_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		78D8E5D4FF6CC6432D51DCBC /* Pods_DAO_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DAO_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CBAC7BC4112545236CF874F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		8CBAC7BC4112545236CF874F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
 		C56D698E28CF6959682D07EA /* Pods_DAO_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DAO_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5737E3C7CE3E74BC20205AB /* Pods-DAO-Swift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAO-Swift_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DAO-Swift_Tests/Pods-DAO-Swift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C9BA31C081AD5132F22CDDD7 /* DAO-Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = "DAO-Swift.podspec"; path = "../DAO-Swift.podspec"; sourceTree = "<group>"; };
-		D360B01D2213297B3BF374E9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C9BA31C081AD5132F22CDDD7 /* DAO-Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "DAO-Swift.podspec"; path = "../../DAO-Swift.podspec"; sourceTree = "<group>"; };
+		D360B01D2213297B3BF374E9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		E448ACB1755DD97DAB8282C7 /* Pods-DAO-Swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAO-Swift_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DAO-Swift_Example/Pods-DAO-Swift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		FA7BF44C1CBEAAB65554026C /* Pods-DAO-Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAO-Swift_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DAO-Swift_Example/Pods-DAO-Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,15 +79,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0317F5591EE1BCB800870A9C /* Presentor */ = {
+			isa = PBXGroup;
+			children = (
+				0317F55D1EE1BCF500870A9C /* Test */,
+			);
+			path = Presentor;
+			sourceTree = "<group>";
+		};
+		0317F55A1EE1BCBE00870A9C /* BL */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BL;
+			sourceTree = "<group>";
+		};
+		0317F55B1EE1BCC200870A9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0317F55C1EE1BCCA00870A9C /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		0317F55D1EE1BCF500870A9C /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD91AFB9204008FA782 /* Test.storyboard */,
+				607FACD71AFB9204008FA782 /* TestViewController.swift */,
+			);
+			name = Test;
+			path = Test;
+			sourceTree = "<group>";
+		};
+		0317F5691EE1C1FA00870A9C /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				0317F5671EE1C1AD00870A9C /* DAO-SwiftTest.swift */,
+			);
+			name = Test;
+			path = Test;
+			sourceTree = "<group>";
+		};
+		0317F56A1EE1C1FE00870A9C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0317F56B1EE1C20F00870A9C /* MockRealmEntity.swift */,
+				0317F56C1EE1C20F00870A9C /* MockRealmEntry.swift */,
+				0317F56D1EE1C20F00870A9C /* MockRealmFabric.swift */,
+				0317F56E1EE1C20F00870A9C /* MockRealmStack.swift */,
+				0317F56F1EE1C20F00870A9C /* MockRealmTranslator.swift */,
+			);
+			name = Mock;
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for DAO-Swift */,
-				607FACE81AFB9204008FA782 /* Tests */,
-				607FACD11AFB9204008FA782 /* Products */,
-				C0813F8EA04607AF2E9A7ACA /* Pods */,
 				E9852CB7CDDD8976494A6B4A /* Frameworks */,
+				C0813F8EA04607AF2E9A7ACA /* Pods */,
+				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACD11AFB9204008FA782 /* Products */,
+				607FACE81AFB9204008FA782 /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,15 +166,14 @@
 		607FACD21AFB9204008FA782 /* Example for DAO-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				0317F55A1EE1BCBE00870A9C /* BL */,
+				0317F55B1EE1BCC200870A9C /* Model */,
+				0317F5591EE1BCB800870A9C /* Presentor */,
+				0317F55C1EE1BCCA00870A9C /* Resourses */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 			);
-			name = "Example for DAO-Swift";
-			path = "DAO-Swift";
+			path = "Example for DAO-Swift";
 			sourceTree = "<group>";
 		};
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
@@ -109,14 +181,15 @@
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				0317F56A1EE1C1FE00870A9C /* Mock */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				0317F5691EE1C1FA00870A9C /* Test */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -126,17 +199,17 @@
 			children = (
 				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
 				C9BA31C081AD5132F22CDDD7 /* DAO-Swift.podspec */,
-				D360B01D2213297B3BF374E9 /* README.md */,
 				8CBAC7BC4112545236CF874F /* LICENSE */,
+				D360B01D2213297B3BF374E9 /* README.md */,
 			);
-			name = "Podspec Metadata";
+			path = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
 		C0813F8EA04607AF2E9A7ACA /* Pods */ = {
@@ -215,10 +288,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 787U6KDRZX;
 						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 787U6KDRZX;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -248,7 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				607FACDB1AFB9204008FA782 /* Test.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -361,7 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				607FACD81AFB9204008FA782 /* TestViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,7 +445,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				0317F5731EE1C20F00870A9C /* MockRealmStack.swift in Sources */,
+				0317F5711EE1C20F00870A9C /* MockRealmEntry.swift in Sources */,
+				0317F5681EE1C1AD00870A9C /* DAO-SwiftTest.swift in Sources */,
+				0317F5721EE1C20F00870A9C /* MockRealmFabric.swift in Sources */,
+				0317F5701EE1C20F00870A9C /* MockRealmEntity.swift in Sources */,
+				0317F5741EE1C20F00870A9C /* MockRealmTranslator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,12 +465,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+		607FACD91AFB9204008FA782 /* Test.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				607FACDA1AFB9204008FA782 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Test.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
@@ -399,6 +480,7 @@
 				607FACDF1AFB9204008FA782 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -496,7 +578,8 @@
 			baseConfigurationReference = FA7BF44C1CBEAAB65554026C /* Pods-DAO-Swift_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "DAO-Swift/Info.plist";
+				DEVELOPMENT_TEAM = 787U6KDRZX;
+				INFOPLIST_FILE = "Example for DAO-Swift/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -510,7 +593,8 @@
 			baseConfigurationReference = E448ACB1755DD97DAB8282C7 /* Pods-DAO-Swift_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "DAO-Swift/Info.plist";
+				DEVELOPMENT_TEAM = 787U6KDRZX;
+				INFOPLIST_FILE = "Example for DAO-Swift/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -523,6 +607,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C5737E3C7CE3E74BC20205AB /* Pods-DAO-Swift_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 787U6KDRZX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -531,7 +616,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -543,11 +628,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 50E2C885842855412B1094BC /* Pods-DAO-Swift_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 787U6KDRZX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
