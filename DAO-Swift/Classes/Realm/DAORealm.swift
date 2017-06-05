@@ -139,11 +139,11 @@ public final class DAORealm: NSObject, DAO {
     
     private func realm(realmName : String?) -> Realm {
         
-        if realmMemoryName != nil || realmMemoryName!.characters.count > 0 {
+        if realmMemoryName != nil {
             return try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: realmMemoryName))
         }
         
-        if realmName == nil || realmName?.characters.count == 0 {
+        if realmName == nil {
             return try! Realm()
         }
         
