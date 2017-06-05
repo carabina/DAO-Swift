@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol DAOPersistent {
+public protocol DAOPersistent {
     
 }

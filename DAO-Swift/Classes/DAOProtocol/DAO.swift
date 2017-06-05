@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DAO {
+public protocol DAO {
  
     /// Init method.
     ///

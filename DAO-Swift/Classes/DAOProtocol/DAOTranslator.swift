@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DAOTranslator {
+public protocol DAOTranslator {
     
     /// Request entity class name.
     ///

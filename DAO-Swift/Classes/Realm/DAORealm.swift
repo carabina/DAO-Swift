@@ -11,7 +11,7 @@ import UIKit
 //POD
 import RealmSwift
 
-final class DAORealm: NSObject, DAO {
+public final class DAORealm: NSObject, DAO {
     
     let realmExtentionName = ".realm"
     
