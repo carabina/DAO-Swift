@@ -27,13 +27,13 @@ public final class DAORealm: NSObject, DAO {
     }
     
     // MARK: - DAO
-    init(translator : DAOTranslator, name : String?) {
+    public init(translator : DAOTranslator, name : String?) {
         
         daoTranslator = translator
         realmName = name
     }
 
-    func persist(entity : DAOPersistent) -> Bool {
+    public func persist(entity : DAOPersistent) -> Bool {
         
         let entry : Object =  daoTranslator.toEntry(entity: entity) as! Object
         
@@ -42,7 +42,7 @@ public final class DAORealm: NSObject, DAO {
         }
     }
     
-    func persistAll(entities : [DAOPersistent]) -> Bool {
+    public func persistAll(entities : [DAOPersistent]) -> Bool {
         
         var entries : [Object] = []
         
@@ -55,7 +55,7 @@ public final class DAORealm: NSObject, DAO {
         })
     }
     
-    func read(ID : Int) -> DAOPersistent {
+    public func read(ID : Int) -> DAOPersistent {
         
         let realmClass = daoTranslator.entryClass() as! Object.Type
         
@@ -69,7 +69,7 @@ public final class DAORealm: NSObject, DAO {
         return entity!
     }
     
-    func readAll() -> [DAOPersistent] {
+    public func readAll() -> [DAOPersistent] {
         
         let realmClass = daoTranslator.entryClass() as! Object.Type
         
@@ -87,7 +87,7 @@ public final class DAORealm: NSObject, DAO {
         return entities
     }
     
-    func readAll(filters:[NSPredicate], sorters:[NSSortDescriptor]) -> [DAOPersistent] {
+    public func readAll(filters:[NSPredicate], sorters:[NSSortDescriptor]) -> [DAOPersistent] {
         
         let realmClass = daoTranslator.entryClass() as! Object.Type
         
@@ -113,7 +113,7 @@ public final class DAORealm: NSObject, DAO {
         return entities
     }
     
-    func erase(ID : Int) -> Bool {
+    public func erase(ID : Int) -> Bool {
         
         return dbTransaction(transactionBlock: { (realm) in
             
@@ -124,7 +124,7 @@ public final class DAORealm: NSObject, DAO {
         })
     }
     
-    func eraseAll() -> Bool {
+    public func eraseAll() -> Bool {
         
         return dbTransaction(transactionBlock: { (realm) in
             
