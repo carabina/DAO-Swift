@@ -8,39 +8,22 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DAO-Swift'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of DAO-Swift.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.version          = '0.1.1'
+  s.summary          = 'Realization of pattern Data Access Object in Swift'
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/irishman1921/DAO-Swift'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'irishman1921' => 'drabberodin@gmail.com' }
   s.source           = { :git => 'https://github.com/irishman1921/DAO-Swift.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'DAO-Swift/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'DAO-Swift' => ['DAO-Swift/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-
-    s.dependency "RealmSwift"
-    s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3' }
+  s.dependency "RealmSwift"
 
 end

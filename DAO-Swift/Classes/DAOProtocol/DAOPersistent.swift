@@ -8,6 +8,5 @@
 
 import UIKit
 
-public protocol DAOPersistent {
-    
-}
+/// Protected type protocol.
+public protocol DAOPersistent {}

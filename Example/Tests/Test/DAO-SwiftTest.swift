@@ -24,21 +24,25 @@ class DAO_SwiftTest: XCTestCase {
     func testRealmPersist() {
         
         //given
+        
         let memoryID = "realmPersist"
         let daoRealm = DAORealm(translator: MockRealmTranslator(), realmMemoryID: memoryID)
         
         let mockEntity = MockRealmFabric.mockEntity(index: 0)
         
         //when
+        
         let result : Bool = daoRealm.persist(entity: mockEntity)
         
         //then
+        
         XCTAssert(result)
     }
     
     func testRealmPersistAll() {
         
         //given
+        
         let memoryID = "realmPersistAll"
         let daoRealm = DAORealm(translator: MockRealmTranslator(), realmMemoryID: memoryID)
         
@@ -51,15 +55,18 @@ class DAO_SwiftTest: XCTestCase {
         }
         
         //when
+        
         let result : Bool = daoRealm.persistAll(entities: mockEntities)
         
         //then
+        
         XCTAssert(result)
     }
     
     func testRealmRead() {
         
         //given
+        
         let memoryID = "realmRead"
         let realm : Realm = MockRealmStack.realmInMemory(realmName: memoryID)
         let daoRealm = DAORealm(translator: MockRealmTranslator(), realmMemoryID: memoryID)
@@ -72,9 +79,11 @@ class DAO_SwiftTest: XCTestCase {
         }
         
         //when
+        
         let resultEntity : MockRealmEntity = daoRealm.read(ID: mockEntity.ID) as! MockRealmEntity
         
         //then
+        
         XCTAssertEqual(mockEntity.ID, resultEntity.ID)
         XCTAssertEqual(mockEntity.name, resultEntity.name)
     }
@@ -82,11 +91,13 @@ class DAO_SwiftTest: XCTestCase {
     func testRealmReadAll() {
         
         //given
+        
         let memoryID = "realmReadAll"
         let realm : Realm = MockRealmStack.realmInMemory(realmName: memoryID)
         let daoRealm = DAORealm(translator: MockRealmTranslator(), realmMemoryID: memoryID)
         
         //when
+        
         let entries : [MockRealmEntry] = [MockRealmFabric.mockEntry(index: 0),
                                           MockRealmFabric.mockEntry(index: 1),
                                           MockRealmFabric.mockEntry(index: 2)]
@@ -104,39 +115,72 @@ class DAO_SwiftTest: XCTestCase {
         let result = daoRealm.readAll() as! [MockRealmEntity]
         
         //then
+        
         XCTAssertEqual(entities.first?.ID, result.first?.ID)
         XCTAssertEqual(entities.last?.name, result.last?.name)
     }
     
-    func testRealmReadAllFiltersAndSorters() {
+    func testRealmReadAllWithFilter() {
         
         //given
-//        let memoryID = "realmReadAllFiltersAndSorters"
-//        let realm : Realm = MockRealmStack.realmInMemory(realmName: memoryID)
-//        let daoRealm = DAORealm(translator: MockRealmTranslator(), realmMemoryID: memoryID)
-//        
-//        let entries : [MockRealmEntry] = [MockRealmFabric.mockEntry(index: 0),
-//                                          MockRealmFabric.mockEntry(index: 1),
-//                                          MockRealmFabric.mockEntry(index: 2)]
-//        
-//        realm.add(entries, update: true)
-//        
-//        //when
-//        
-//        let predicate = NSPredicate(format: "", NSNumber())
-//        let sortDescriptor = SortDescriptor(property: "", ascending: true)
         
-//        daoRealm.readAll(filters:[predicate], sorters: [sortDescriptor])
+        let memoryID = "realmReadAllFilters"
+        let realm : Realm = MockRealmStack.realmInMemory(realmName: memoryID)
+        let daoRealm = DAORealm(translator: MockRealmTranslator(), realmMemoryID: memoryID)
+        
+        let entries : [MockRealmEntry] = [MockRealmFabric.mockEntry(index: 0),
+                                          MockRealmFabric.mockEntry(index: 1),
+                                          MockRealmFabric.mockEntry(index: 2)]
+        
+        try! realm.write {
+            realm.add(entries, update: true)
+        }
+        
+        //when
+        
+        guard entries.first?.name != nil else {
+            XCTAssert(false, "Entries name is nil")
+            return
+        }
+        
+        let predicate: NSPredicate = NSPredicate(format: "name == %@", entries.first!.name! )
+        let result = daoRealm.readAll(filters:[predicate], sorters:[]) as! [MockRealmEntity]
         
         //then
-        XCTAssert(true)
         
+        XCTAssertEqual(result.first?.name, entries.first?.name)
     }
     
+    func testRealmReallAllWithSorter() {
+        
+        //given
+        
+        let memoryID = "realmReadAllSorters"
+        let realm : Realm = MockRealmStack.realmInMemory(realmName: memoryID)
+        let daoRealm = DAORealm(translator: MockRealmTranslator(), realmMemoryID: memoryID)
+        
+        let entries : [MockRealmEntry] = [MockRealmFabric.mockEntry(index: 0),
+                                          MockRealmFabric.mockEntry(index: 1),
+                                          MockRealmFabric.mockEntry(index: 2)]
+        
+        try! realm.write {
+            realm.add(entries, update: true)
+        }
+        
+        //when
+        
+        let sortDescriptor: NSSortDescriptor = NSSortDescriptor(key: "ID", ascending: false)
+        let result = daoRealm.readAll(filters:[], sorters: [sortDescriptor]) as! [MockRealmEntity]
+        
+        //then
+        
+        XCTAssertEqual(result.last?.ID, entries.first?.ID)
+    }
     
     func testRealmErase() {
         
         //given
+        
         let memoryID = "realmErase"
         let realm : Realm = MockRealmStack.realmInMemory(realmName: memoryID)
         let daoRealm = DAORealm(translator: MockRealmTranslator(), realmMemoryID: memoryID)
@@ -150,16 +194,19 @@ class DAO_SwiftTest: XCTestCase {
         }
         
         //when
+        
         let result : Bool = daoRealm.erase(ID: mockEntity.ID)
         let entriesAfterErase : Results = realm.objects(MockRealmTranslator().entryClass() as! Object.Type)
         
         //then
+        
         XCTAssert(result && entriesAfterErase.count == 1)
     }
     
     func testRealmEraseAll() {
         
         //given
+        
         let memoryID = "realmEraseAll"
         let realm : Realm = MockRealmStack.realmInMemory(realmName: memoryID)
         let daoRealm = DAORealm(translator: MockRealmTranslator(), realmMemoryID: memoryID)
@@ -174,10 +221,12 @@ class DAO_SwiftTest: XCTestCase {
         }
         
         //when
+        
         let result :Bool = daoRealm.eraseAll()
         let entriesAfterErase : Results = realm.objects(MockRealmTranslator().entryClass() as! Object.Type)
         
         //then
+        
         XCTAssert(result && entriesAfterErase.count == 0)
     }
 }

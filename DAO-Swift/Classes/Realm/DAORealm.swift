@@ -7,32 +7,81 @@
 //
 
 import UIKit
-
-//POD
 import RealmSwift
 
-public final class DAORealm: NSObject, DAO {
+/// Class implement DAO with Realm framework.
+public final class DAORealm {
     
-    let realmExtentionName = ".realm"
     
-    var daoTranslator : DAOTranslator
-    var realmName : String?
-    var realmMemoryName : String?
+    //MARK: - Private let
+    
+    private let realmExtentionName = ".realm"
+    
+    
+    //MARK: - Private var
+    
+    fileprivate var daoTranslator : DAOTranslator
+    fileprivate var realmName : String?
+    fileprivate var realmMemoryName : String?
+    
     
     // MARK: - Custom init
+    
     init(translator : DAOTranslator, realmMemoryID : String) {
         
         daoTranslator = translator
         realmMemoryName = realmMemoryID
     }
     
-    // MARK: - DAO
+    
+    //MARK: - DAO init
+    
     public init(translator : DAOTranslator, name : String?) {
         
         daoTranslator = translator
         realmName = name
     }
+    
+    // MARK: - Private methods
+    
+    fileprivate func realm(realmName : String?) -> Realm {
+        
+        if realmMemoryName != nil {
+            return try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: realmMemoryName))
+        }
+        
+        if realmName == nil {
+            return try! Realm()
+        }
+        
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let realmUrl : URL = URL(string:documentsPath + "/" + realmName! + realmExtentionName)!
+        
+        let configurationRealm = Realm.Configuration(fileURL: realmUrl)
+        
+        return try! Realm(configuration: configurationRealm)
+    }
+    
+    fileprivate func dbTransaction(transactionBlock : ((_ : Realm) -> Void)) -> Bool {
+        
+        let realm = self.realm(realmName: self.realmName)
+        realm.beginWrite()
+        transactionBlock(realm)
+    
+        do {
+            try realm.commitWrite()
+        }
+        catch {
+            realm.cancelWrite()
+            return false
+        }
+        
+        return true
+    }
+}
 
+extension DAORealm: DAO {
+    
     public func persist(entity : DAOPersistent) -> Bool {
         
         let entry : Object =  daoTranslator.toEntry(entity: entity) as! Object
@@ -102,7 +151,13 @@ public final class DAORealm: NSObject, DAO {
             }
             
             for sorter in sorters {
-                result = result.sorted(byProperty: sorter.key!, ascending: sorter.ascending)
+                
+                guard sorter.key != nil else {
+                    print("sorter key is nil!")
+                    continue
+                }
+                
+                result = result.sorted(byKeyPath: sorter.key!, ascending: sorter.ascending)
             }
             
             for entry in result {
@@ -130,45 +185,9 @@ public final class DAORealm: NSObject, DAO {
             
             let realmClass = daoTranslator.entryClass() as! Object.Type
             let results = realm.objects(realmClass)
-        
+            
             realm.delete(results)
         })
     }
     
-    // MARK : - Private
-    
-    private func realm(realmName : String?) -> Realm {
-        
-        if realmMemoryName != nil {
-            return try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: realmMemoryName))
-        }
-        
-        if realmName == nil {
-            return try! Realm()
-        }
-        
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        let realmUrl : URL = URL(string:documentsPath + "/" + realmName! + realmExtentionName)!
-        
-        let configurationRealm = Realm.Configuration(fileURL: realmUrl)
-        
-        return try! Realm(configuration: configurationRealm)
-    }
-    
-    private func dbTransaction(transactionBlock : ((_ : Realm) -> Void)) -> Bool {
-        
-        let realm = self.realm(realmName: self.realmName)
-        realm.beginWrite()
-        transactionBlock(realm)
-    
-        do {
-            try realm.commitWrite()
-        }
-        catch {
-            realm.cancelWrite()
-            return false
-        }
-        
-        return true
-    }
 }
