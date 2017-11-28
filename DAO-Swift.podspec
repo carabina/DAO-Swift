@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DAO-Swift'
-  s.version          = '0.1.1'
+  s.version          = '1.1.1'
   s.summary          = 'Realization of pattern Data Access Object in Swift'
 
   s.description      = <<-DESC
